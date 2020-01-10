@@ -1,5 +1,7 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<p>
+  My pancake is topped with: {{this.pancake}}
+</p>
 
-{{outlet}}
+<LinkTo @route="application" @query={{hash p="with-maple-syrup"}}>Maple Syrup</LinkTo>
+|
+<LinkTo @route="application" @query={{hash p="butter"}}>Butter</LinkTo>
