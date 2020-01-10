@@ -1,9 +1,9 @@
 import Controller from '@ember/controller';
 
-export default class ApplicationController extends Controller {
-  queryParams = {
-    'pancake': 'p'
-  };
+import { readOnly } from '@ember/object/computed';
 
-  pancake = null;
+export default class ApplicationController extends Controller {
+  queryParams = ['p'];
+
+  @readOnly('p') pancake;
 }
